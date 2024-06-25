@@ -18,8 +18,8 @@ export default function SimpleMenu({notifications = 0, ...props}: SimpleMenuProp
     const pathname = usePathname();
 
     return (
-        <Button className={cn("justify-start px-3 shadow-none mt-1 bg-inherit text-gray-400 dark:text-white dark:hover:dark:bg-green-700/60 hover:bg-green-400/20", {
-            'bg-green-500/20 text-green-700 dark:bg-green-500/20': pathname === props.url
+        <Button className={cn(" justify-start px-3 shadow-none mt-1 bg-inherit text-gray-400 dark:text-white dark:hover:dark:bg-green-700/60 hover:bg-green-400/20", {
+            'bg-green-500/20 text-green-700 dark:bg-green-500/20 border-s-4 border-green-700 rounded-r-lg': pathname === props.url
         })} size="lg" asChild>
             <Link href={{pathname: `${props.url}`}}>
                 <span>
